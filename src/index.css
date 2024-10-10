@@ -1,13 +1,47 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.bill {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bill-text {
+  margin: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+select,
+button {
+  appearance: none; /* Убирает стандартные стили браузера */
+  padding: 5px 10px;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+select:focus {
+  border-color: #000000;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.4);
+}
+
+select:hover,
+button:hover {
+  background-color: #f9f9f9;
+}
+
+select:active {
+  transform: scale(0.98);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
